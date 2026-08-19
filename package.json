@@ -13,6 +13,7 @@
     "test": "node --test",
     "test:unit": "node --test test/transactionParser.test.js test/exporter.test.js test/store.test.js",
     "make:sample": "node scripts/make-sample-pdf.js",
+    "check:gumroad": "node scripts/check-gumroad.js",
     "audit": "npm audit --audit-level=high"
   },
   "dependencies": {
