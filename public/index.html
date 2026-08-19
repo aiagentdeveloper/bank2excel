@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank2Excel — PDF Bank Statements to Excel &amp; CSV in Seconds</title>
+  <meta name="description" content="Convert PDF bank statements to Excel (XLSX) and CSV in seconds. No account, no upload to third parties, no signup. Bank2Excel parses dates, amounts and balances automatically.">
+  <meta property="og:title" content="Bank2Excel — PDF to Excel Converter">
+  <meta property="og:description" content="Turn any PDF bank statement into Excel/CSV in seconds. Privacy-first, no signup required.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d9488'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EB2%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">Bank<span>2</span>Excel</a>
+      <nav>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>PDF bank statements to <span>Excel &amp; CSV</span> in seconds</h1>
+      <p class="sub">Upload your statement. Get a clean spreadsheet with dates, descriptions, amounts and balances — automatically. No account, no signup, no data stored.</p>
+
+      <div class="converter card" id="converter">
+        <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload PDF">
+          <input type="file" id="fileInput" accept="application/pdf" hidden>
+          <div id="dropText">
+            <div class="drop-icon">&#8682;</div>
+            <p><strong>Drop your PDF here</strong> or <span class="link">browse</span></p>
+            <p class="hint">Max 10 MB &middot; text-based statements &middot; up to 250 pages</p>
+          </div>
+          <div id="fileInfo" class="file-info hidden"></div>
+        </div>
+
+        <div id="status" class="status hidden" role="status"></div>
+
+        <div id="results" class="results hidden">
+          <div id="summary" class="summary"></div>
+          <div class="actions">
+            <a id="dlCsv" class="btn btn-primary" href="#" download>Download CSV</a>
+            <a id="dlXlsx" class="btn" href="#" download>Download Excel</a>
+          </div>
+          <p class="hint">Files are deleted from our servers 15 minutes after conversion.</p>
+        </div>
+
+        <div id="paywall" class="paywall hidden">
+          <h2>Free trial used</h2>
+          <p>One free conversion per browser, per day. Get unlimited conversions with a lifetime license.</p>
+          <p class="price"><strong>$9</strong> one-time &middot; lifetime access &middot; no subscription</p>
+          <a id="buyBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">Buy license on Gumroad</a>
+          <div class="license-form">
+            <p class="hint">Already purchased? Paste your license key:</p>
+            <div class="license-row">
+              <input type="text" id="licenseKey" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" autocomplete="off" spellcheck="false">
+              <button id="activateBtn" class="btn">Activate</button>
+            </div>
+            <p id="licenseMsg" class="license-msg" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>Automatic parsing</h3>
+        <p>Dates, descriptions, amounts and running balances extracted automatically from 40+ common statement layouts.</p>
+      </div>
+      <div class="feature">
+        <h3>Multi-currency ready</h3>
+        <p>Handles USD, EUR, GBP, TRY and more — including European 1.234,56 and US 1,234.56 number formats.</p>
+      </div>
+      <div class="feature">
+        <h3>Privacy first</h3>
+        <p>Your statement is processed in memory and deleted within 15 minutes. We never store it, never sell it, never see it after conversion.</p>
+      </div>
+    </section>
+
+    <section id="how" class="how">
+      <h2>How it works</h2>
+      <ol>
+        <li><strong>Upload</strong> your PDF bank statement.</li>
+        <li><strong>Convert</strong> — we parse every transaction in seconds.</li>
+        <li><strong>Download</strong> clean CSV or Excel, ready for accounting.</li>
+      </ol>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <h2>Simple pricing</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <p class="price">$0</p>
+          <ul>
+            <li>1 conversion per day</li>
+            <li>CSV + Excel export</li>
+            <li>No account needed</li>
+          </ul>
+        </div>
+        <div class="plan plan-featured">
+          <h3>Lifetime</h3>
+          <p class="price">$9 <span>one-time</span></p>
+          <ul>
+            <li>Unlimited conversions</li>
+            <li>CSV + Excel export</li>
+            <li>Lifetime license key</li>
+            <li>Priority support</li>
+          </ul>
+          <a id="buyBtn2" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">Get lifetime access</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bank2Excel &middot; <a href="privacy.html">Privacy</a> &middot; Payments handled securely by Gumroad</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

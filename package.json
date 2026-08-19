@@ -1,0 +1,28 @@
+{
+  "name": "bank2excel",
+  "version": "1.0.0",
+  "description": "Convert PDF bank statements to Excel/CSV in seconds. Privacy-first, no account required.",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "test:unit": "node --test test/transactionParser.test.js test/exporter.test.js test/store.test.js",
+    "make:sample": "node scripts/make-sample-pdf.js",
+    "audit": "npm audit --audit-level=high"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "fflate": "^0.8.2",
+    "helmet": "^8.0.0",
+    "multer": "^1.4.5-lts.1",
+    "pdfjs-dist": "4.10.38"
+  }
+}
